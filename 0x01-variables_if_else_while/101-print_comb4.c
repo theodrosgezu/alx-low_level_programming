@@ -11,23 +11,31 @@
  */
 int main(void)
 {
-	for (int i = 0; i <= 7; i++)
+	char sep = ','; /* Initialize separator */
+	char space = ' '; /* Initialize space character */
+	int i, j, k; /* Initialize loop variables */
+
+	for (i = 0; i <= 7; i++)
 	{
-		for (int j = i + 1; j <= 8; j++)
+		for (j = i + 1; j <= 8; j++)
 		{
-			for (int k = j + 1; k <= 9; k++)
+			for (k = j + 1; k <= 9; k++)
 			{
 				putchar(i + '0');
-				putchar(',');
-				putchar(' ');
 				putchar(j + '0');
-				putchar(',');
-				putchar(' ');
 				putchar(k + '0');
-				putchar('\n');
+
+				/* Print separator and space if not the last combination */
+				if (!(i == 7 && j == 8 && k == 9))
+				{
+					putchar(sep);
+					putchar(space);
+				}
 			}
 		}
 	}
+
+	putchar('\n'); /* Print newline character */
 
 	return (0);
 }
