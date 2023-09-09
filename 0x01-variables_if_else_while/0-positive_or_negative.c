@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 
 /**
  * main - generates a random number and prints whether it is positive,
@@ -9,11 +10,13 @@
  */
 int main(void)
 {
+	int n;
+
 	/* initialize random number generator */
 	srand(time(0));
 
 	/* generate random number */
-	int n = rand() - RAND_MAX / 2;
+	n = rand() - RAND_MAX / 2;
 
 	/* check if number is positive, negative, or zero */
 	if (n > 0)
