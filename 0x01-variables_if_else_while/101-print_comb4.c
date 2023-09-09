@@ -11,9 +11,7 @@
  */
 int main(void)
 {
-	char sep = ','; /* Initialize separator */
-	char space = ' '; /* Initialize space character */
-	int i, j, k; /* Initialize loop variables */
+	int i, j, k;
 
 	for (i = 0; i <= 7; i++)
 	{
@@ -25,17 +23,16 @@ int main(void)
 				putchar(j + '0');
 				putchar(k + '0');
 
-				/* Print separator and space if not the last combination */
 				if (!(i == 7 && j == 8 && k == 9))
 				{
-					putchar(sep);
-					putchar(space);
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
 	}
 
-	putchar('\n'); /* Print newline character */
+	putchar('\n');
 
 	return (0);
 }
