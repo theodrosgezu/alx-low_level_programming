@@ -1,32 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Prints all possible different combinations of two digits.
  *
- * Description: Prints all possible different combinations of two digits.
- * Numbers must be separated by ', ' (comma followed by tab).
- * The two digits must be different.
- * 01 and 10 are considered the same combination.
- * Print only the smallest combination of two digits.
- * Numbers should be printed in ascending order with two digits.
- * You can only use the putchar function.
- *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 int main(void)
 {
 	int i, j;
 
-	for (i = 0; i <= 8; i++)
+	for (i = 0; i < 10; i++)
 	{
-		for (j = i + 1; j <= 9; j++)
+		for (j = i + 1; j < 10; j++)
 		{
-			putchar('0' + i);
-			putchar('0' + j);
-			if (!(i == 8 && j == 9))
+			putchar(i + '0');
+			putchar(j + '0');
+			if (i != 8 || j != 9)
 			{
 				putchar(',');
-				putchar('\t');
+				putchar(' ');
 			}
 		}
 	}
